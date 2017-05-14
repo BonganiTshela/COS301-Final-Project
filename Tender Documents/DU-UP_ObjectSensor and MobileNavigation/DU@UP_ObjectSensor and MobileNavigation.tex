@@ -84,6 +84,10 @@ includefoot
 				\textsc{\large\\
 					Mandla Mhlongo - 29630135\\ 
 				}
+				\textsc{\Large\textbf{\\Team Photo.\\}}
+    
+                \includegraphics[width=15cm, height=10cm]{Team.png}
+
 			\end{centre}
 			
 			
@@ -101,13 +105,48 @@ includefoot
 	\endgroup
 	\newpage
 	
-	\section{Description} %-------The description starts here-----------------------%
+	\section{Description}
+	Students with visual disabilities have difficulties accessing the academic environment. This project aims to create a mobile navigation application which will enable students with visual disabilities to safely navigate UP campuses, both indoor and outdoor. The application should enable the student to detect an obstacle and how far he/she is from the obstacle. If a student is too close to an obstacle, the application should notify the student with a series of audible beeps. \\
+   
+    
+    \textbf{\\Technologies\\} 
+   \\ We intend to address the requirements of the application by using open source resources as much as we can.\\
+    \\Students use the same facilities most of the time, often in a certain order. This is due to a well-defined schedule (timetable) that students follow. Thus the ability of the application to collect and store these patterns will make the application very efficient and effective to use. We intend to use PostgreSQL to store the relevant behavioural data needed. Since most mobile use iOS or android operating systems, the application will run on both platforms. A Web front will also be another access method. We intend to use the application shell architecture in order to develop for all access method concurrently.\\
+    \\Since the application aims to cater for students with visual disabilities, we will use Google assistant speech API to provide voice commands to help these student to navigate the campus safely. Bluetooth tags, that enables the localization and distance of an obstacle, will be used together with Bluetooth transmitters to communicate with a student’s mobile device to send information about the student’s position and determine distance from obstacle. Google proximity beacon API will be used in this regard to give our users the location and proximity of a Bluetooth tag, which represent an obstacle. \\
+   
+   \textbf{\\System Deployment Diagram.\\}
+    \begin{center}
+    
+    
+    \includegraphics[width=\textwidth]{Nav_Sensors.png}
+    \end{center}
+    
+    
+    
+	\pagebreak
+	\section{Methodology} 
 	
-	\subsection{Technologies}
-	We intend to address the requirements of the application by using open source resources as much as we can.
-Students use the same facilities most of the time, often in a certain order. This is due to a well-defined schedule (timetable) that students follow. Thus the ability of the application to collect and store these patterns will make the application very efficient and effective to use. We intend to use PostgreSQL to store the relevant behavioural data needed. Since most mobile use iOS or android operating systems, the application will run on both platforms. A Web front will also be another access method. We intend to use the application shell architecture in order to develop for all access method concurrently.\\
-Since the application aims to cater for students with visual disabilities, we will use google assistant speech API to provide voice commands to help these student to navigate the campus safely. Bluetooth tags, that enables the localisation and distance of an obstacle, will be used together with Bluetooth transmitters to communicate with a student’s mobile device to send information about the student’s position and determine distance from obstacle. Google proximity beacon API will be used in this regard to give our users the location and proximity of a Bluetooth tag, which represent an obstacle.\\ 
+	We are going to use the agile software development methodologies – as they emphasize real time communication and a relatively high customer involvement. We as a team will be working closely together (pair programming) and we will be meeting at least a week to work on the project.  We are also be planning to be in constant communication with the lectures so that they can assist when we need help and track our progress. \\
+	\\As a team we think we should be in constant communication with the client so that they are aware of the development and the progress the team is making. The client should also be notified or consulted with projects enhancement or module improvements.\\
+	
+	As team we believe involving the customers early on in the development process will be very beneficial to the development of the application. It will help us (development team) to clarify and prioritize requirements. Software development methodologies that emphasize customer participation are very attractive to the team. For this reason we intend to use the agile software development methodologies. However - since all methodologies have their pitfalls - we intend to also use the extreme programming methodology to produce working code at a sustainable pace\\
+    
+	\section{Team members details}
+	Our team consists of 5 individuals in the final year of our BSc Computer Science and Information Technology degrees, we all have similar skill sets with relation to coding software engineering. \\
+	The programming languages we are more familiar with include: \\
+	\begin{itemize}
+      \item C++
+      \item Python
+      \item Java
+      \item Web scripting languages ( both MEAN and LAMP stack)
+      \item Shell scripting (Linux and Windows) 
+      \item Assembly language\\
+    \end{itemize}
+     
+    The set of skills that we have are not limited to those we are taught( as students). As a programmer the ability to learn and adapt quickly is very essential. As a team we believe that we have this ability in abundance. \\
+	
+	\\The project will be divided up into segments with whichever member feels they will produce the best final product in and because we will be meeting and working together, all members will come together and consolidate the system to make sure it meets with the client's expectations.
 
-  \section{Methodology} %-------The Methodology starts here-----------------------%
-  \section{Team members details}%-----More details about the team-----------------%
-  \end{document}
+     
+     
+\end{document}
