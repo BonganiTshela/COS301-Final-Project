@@ -13,6 +13,7 @@
 * Our Slack Team: https://procoders301.slack.com/
 
 * <b>MagicDraw</b> (UML Tool) https://www.nomagic.com/products/magicdraw NOTE: The keycode is available on the CS site.
+* <b>Tutorials Point</b> (Benchmarking tut) https://www.tutorialspoint.com/software_testing_dictionary/benchmark_testing.
 * <b>Draw.io</b> (Online UML Tool) https://www.draw.io/ 
 * <b>IntelliJ IDEA</b> https://www.jetbrains.com/idea/ NOTE: Use your student details to register if you do not use this IDE. We will use this for the spatial database. Check out (http://docs.geotools.org/latest/userguide/tutorial/quickstart/intellij.html) for a tuorial on working with Maven, IntelliJ and GeoTools
 
