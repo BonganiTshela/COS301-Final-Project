@@ -47,7 +47,7 @@ includefoot
 %Title Page
 \begin{titlepage}
 	\begin{center}
-		\includegraphics[width=10cm]{UP_Logo.PNG}  \\
+		\includegraphics[width=10cm]{Images\UP_Logo.PNG}  \\
 		[1cm]
 		\line(1,0){300} \\
 		[0.3cm]
