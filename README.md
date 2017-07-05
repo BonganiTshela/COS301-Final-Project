@@ -6,7 +6,7 @@
 ### Team Members
 - Bongani Tshela 14134790
 - Minal Pramlall 13288157 
-- Mandla Mhlongo 29630135
+- Joseph Letsoalo 15043844
 - Harris Leshaba 15312144 
 
 ### Resources
