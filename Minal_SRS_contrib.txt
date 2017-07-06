@@ -1,0 +1,46 @@
+\section{Overall Description}
+	The Benchmarking service will be to provide users with the capability of testing viability between algorithms with graphical data backed by performed tests. Programmers are taught multiple ways to complete a task, and with a benchmarking tool at their disposal, they will be able to make informed decisions with which is the best algorithm to use among the ones that they have considered. \newline
+	
+	The service will make use of microkernels, a super-lightweight operating system that will handle user requests and provide results. The system will be run off a cloud infrastructure service such as Google Cloud Compute Engine, to ensure the service is completely online, and thus completely accessible from anywhere with an internet connection. \newline
+	
+	The user will communicate with the system through a website interface, they can submit multiple algorithms to benchmark and multiple datasets for them to be tested against. The system will benchmark all of these concurrently and provide the user with graphs and other visual output on the results. \newline
+	
+	The system will be released into the open-source domain upon completion (Per request of the client). \newline
+
+	\subsection{Product Perspective}
+		A benchmarking service is not easily accessible so this system will be able to provide for that need. Team ProCoder will undertake the development of this service, and provide a reliable and convenient system that will be available for public use. \newline
+		
+		\subsubsection{User Interfaces}
+			The Benchmarking system will have a website interface that the user will be interacting with, it will use modern design and an easy-to-use interface that will allow the user to interact without difficulty and also be pleasing to the eye. \newline
+			
+			The user will be given the option if they want to register to the site or not, and will then be directed to the input page where they can submit their algorithms and datasets that they want to be benchmarked. The system will perform the benchmarking and return the results to the user in the form of graphs and other visual representation, if the user had decided to register to the site then they will be given the option to save their benchmarking results should they want to revisit it at a later time. \newline
+			
+		\subsubsection{Hardware Interfaces}
+			The benchmarking system will be able to run on internet browsers, the latest browsers and ones compatible with HTML5 is recommended. \newline
+			
+		\subsubsection{Software Interfaces}
+			The benchmarking system will be run on a cloud platform, using MySQL database technologies to store user data. \newline
+			
+		\subsubsection{Communications Interfaces}
+			The benchmarking service will make use of HTTP for the user to communicate with the website interface of the system. \newline
+			
+		\subsubsection{Memory}
+			The microkernel technology has been chosen as it is a Virtual Machine that is attractively lightweight on memory, with an estimated 20MB on overheads, the size of the VM will look to be approximately 80MB in size. The resource allocation to the VM is determined based on the request so that it will only be allocated the amount of resources to suit the request. \newline
+
+%----------------------------------------
+
+\section{Specific Requirements}
+	\subsection{External Interface Requirements}
+		\begin{EIREnum}
+			\item The user will communicate with the web interface, providing test algorithms and datasets as inputs.
+			\item The Access module will receive the user inputs, validate correctness, and then send it to the benchmarking module. \newline
+				Error checking will consist of ensuring the algorithms and datasets are compatible, as well as the code that is going to be executed is not harmful to the system (Eg. Infinite loops).
+			\item The Benchmarking module will boot up a virtual machine to respond to this request, and send the user input through as parameters.
+			\item The Access module will receive the results from the Benchmarking module, and then send it to the Display module.
+			\item The Display module receives the results from the Access module and then draws visual representation on the Web Interface \newline
+				If the user is a free or registered is determined at this stage and will determine how extensively drawn the output will be for the user.
+			\item If the user is registered, then they will have the option to save their benchmarking data for later viewing, which will be performed by the Access module. \newline
+				A MySQL database will be utilized for storing user data.
+		\end{EIREnum}
+	
+%----------------------------------------
