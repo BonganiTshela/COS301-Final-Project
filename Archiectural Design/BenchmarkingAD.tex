@@ -151,5 +151,50 @@ The following services should be provided
 \newline 
 \textit{Figure 4} class diagram.
 
+\section{Display module}
+\subsection{Scope}
+The display module construts graphs, charts and tables to represent the benchmark results, and how different algorithms 
+compare against one another in terms of perfolrmance.
+
+\includegraphics[width=7cm,height=10cm]{DisplayUseCase.png}
+\newline 
+\textit{Figure 5} use case.
+\newline
+\newline
+The display module concerns itself with rendering and displaying the results of benchmarks.
+The display module concerns itself primarily about creating graphs, charts and tables to represent the
+benchmarking results in a easily readable manner. 
+\newline
+\subsubsection{\textbf{Domain model}}
+The Display domain model is shown in Figure 6
+\newline
+\newline
+\includegraphics[width=7cm,height=8cm]{DisplayDomainModel.png}
+\newline 
+\textit{Figure 6} class diagram.
+\newline
+The domain model indicates how the client will use the Drawer to create the specific representation of the benchmark results.
+\newline
+\subsection{\textbf{Service contracts}}
+The following services should be provided
+\newline
+\newline
+\includegraphics[width=12cm,height=10cm]{DisplayServiceContracts (1).png}
+\newline 
+\textit{Figure 7} Service Contracts.
+\newline
+The service contract specified above will be refused under one condition. If the draw request fails the validation protocol, 
+then the contract can be refused. Otherwise, the DrawObject will be persisted and stored in the system.
+\newline
+\subsection{\textbf{Technologies}}
+\newline
+When it comes to Display technologies, one in particular is of note.
+ JFreeChart - A free 100% JAVA chart library that makes it easy for developers to display professional quality charts in their applications.
+ JFreeChart's extensive feature set includes:
+	\item 1.A consistent and well-documented API, supporting a wide range of chart types;
+	\item 2.A flexible design that is easy to extend, and targets both server-side and client-side applications;
+	\item 3.Support for many output types, including Swing and JavaFX components, image files (including PNG and JPEG), and vector graphics file formats (including PDF, EPS and SVG);
+	\item 4.JFreeChart is open source or, more specifically, free software. It is distributed under the terms of the GNU Lesser General Public Licence (LGPL), which permits use in proprietary applications.
 \end{document}
+
 
