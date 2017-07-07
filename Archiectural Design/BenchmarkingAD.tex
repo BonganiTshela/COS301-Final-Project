@@ -99,6 +99,13 @@ includefoot
 \addcontentsline{toc}{section}{Table Of Contents}
 \endgroup
 \newpage
+\section{Project background.}
+Bench marking seem to be a very common and useful application, very few bench-marking tools or services are available. Those that are available requires intricate configuration that may be beyond the reach of the developers, researchers,
+teachers and students who would like to use them. The development of a bench-marking service which can be used in a generic way would therefore be welcomed by a large
+potential user base.
+
+\section{Project vision.}
+The system provides a web interface for users to request and specify the bench-marking services they need. The services will be provided by executing the requested benchmarks on isolated machines where the side-effects that are not a concern of the specified benchmark is minimized. The system measures a variety of performance attributes such as CPU time, elapsed time, memory usage, power consumption, heat generation, etc. Ir accepts source code for a variety modern programming languages.
 \section{Project Scope}
 The core of the system is a benchmarking tool which. The high level modules and their responsibilities are
 shown in Figure 1
@@ -195,6 +202,19 @@ When it comes to Display technologies, one in particular is of note.
 	\item 2.A flexible design that is easy to extend, and targets both server-side and client-side applications;
 	\item 3.Support for many output types, including Swing and JavaFX components, image files (including PNG and JPEG), and vector graphics file formats (including PDF, EPS and SVG);
 	\item 4.JFreeChart is open source or, more specifically, free software. It is distributed under the terms of the GNU Lesser General Public Licence (LGPL), which permits use in proprietary applications.
+	
+\section{Bench-marking and VM initializing Module}
+\subsection{Scope}
+
+The module initializes and deploys VMs based on the request(s). On the VMs we will have a Java program that runs other programs, that is compile them, run them with the user specified data sets and then benchmark the program or algorithms. This module will initialize VMs on request and can initialize them concurrently within seconds.\\
+
+\includegraphics[width=15cm , height=12cm]{VMInitialier.jpg}  \\
+\subsection{Service Contracts.}
+\includegraphics[width=15cm , height=12cm]{SCBenchmark.jpg}  \\
+\subsection{Technologies.}
+Osv - the open source operating system designed for the cloud. Built from the ground up for effortless deployment and management, with superior performance.\\
+
+Unikernels - specialized, single address space machine images constructed by using library operating systems(Osv in our case).We select, from a modular stack, the minimal set of libraries which correspond to the OS constructs required for our application to run.\\
 \end{document}
 
 
