@@ -103,7 +103,17 @@ includefoot
 %-------------------------First section---------------------
 \section{Introduction}
 \subsection{Purpose}
+	This document aims to unambiguosly define the requirements of the microbenchmarking web service.
+	The document describes the uses of the product including objectives and goals.
+	This document is intended for the development team, to enable all members of the team to have the
+	same understanding of what should be done. The client can also use the document to verify whether the
+	development team understood the needs and goals of the user, partaining to the use of the service.
 \subsection{Scope}
+	Product Name: ProBenchmarking
+	Probenchmarking is an online microbenchmarking service that enable users to benchmark thier algorithms
+	on different platforms. The users can measure how their algorithms use resouces of the system. 
+	They can measure how the algorithms uses a variety of system performance attributes such as CPU time, elapsed time,
+	memory usage, power consumption and heat generation.
 \subsection{Overview}
 
 %-------------------------2nd Section---------------------
@@ -142,6 +152,11 @@ includefoot
 
 
 \subsection{User Characteristics}
+	The web service will be used by people who are relatively knowledge about computer programming and the internal 
+	organization of computer systems, that is, they are familiar with the computer jargon that will be used. The service
+	will be used by developers, researchers, teachers and students in the computer programming world. The benchmarking
+	service should be used in a generic way, without intricate configuration, to welcome usage from a large potential 
+	user base.
 \subsection{Constrains}
 
 
@@ -168,9 +183,31 @@ includefoot
 %----------------------------------------
 
 \subsection{Functional Requirements}
-
+	The system should enable the user to upload source code
+	The system should verify that the code is complete, no errors
+	The system should let the user choose the performance attribute to measure
+	The system should run the algorithm
+	The system should provide feed back to the user 
+	The system should let user crud account
 \subsection{Performance Requirements}
+	Efficiency
+		Time Behaviour 
+		The benchmarking service should provide a response in at most 10sec, provided there are no delays partaining to the internet connection.
+	
+		Resource Behaviour
+		The platform the system will be running on should use minimal resources (isolated machines) so that the side-effects that are not a concern
+		of the specified benchmark is minimized.
+	
+	Scalability
+		The system should be able to handle a growing amount of work or be extended to accomodate growth. The total output should be able to increase 
+		when resources are added.
 
+	Reliabity
+		The system should be able to compile and benchmark any algorithm written in java.
+		The system should be available to any device that has a browser.
+
+	Usability
+		The system should be easy to use without any need for local configuration.
 
 \subsection{Software System Attributes}
 
