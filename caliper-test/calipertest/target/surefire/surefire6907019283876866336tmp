@@ -1,0 +1,7 @@
+#surefire
+#Wed Jul 12 22:42:30 CAT 2017
+maven.ext.class.path=C\:\\Program Files\\NetBeans 8.1\\java\\maven-nblib\\netbeans-eventspy.jar
+user.dir=C\:\\Users\\Minal\\Documents\\NetBeansProjects\\calipertest
+file.encoding=UTF-8
+localRepository=C\:\\Users\\Minal\\.m2\\repository
+basedir=C\:\\Users\\Minal\\Documents\\NetBeansProjects\\calipertest

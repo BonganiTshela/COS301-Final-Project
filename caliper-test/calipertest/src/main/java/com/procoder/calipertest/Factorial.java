@@ -11,6 +11,7 @@ package com.procoder.calipertest;
  */
 public class Factorial {
 	static long recursive(int number) {
+                if (number < 0) return 0;
 		switch (number) {
 			case 0:
 				return number;

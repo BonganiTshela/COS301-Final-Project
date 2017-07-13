@@ -15,7 +15,15 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Runner.main(MyBenchmark.class, args);
+        //Runner.main(MyBenchmark.class, args);
+        TestBenchmark t1 = new TestBenchmark(0, args);
+        t1.run();
+        
+        TestBenchmark t2 = new TestBenchmark(1, args);
+        t1.run();
+        
+        TestBenchmark t3 = new TestBenchmark(2, args);
+        t1.run();
     }
     /*
     @Param({"5", "10", "15"}) int number;
