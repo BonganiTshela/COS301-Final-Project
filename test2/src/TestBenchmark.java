@@ -1,8 +1,3 @@
-
-import com.google.caliper.SimpleBenchmark;
-import com.google.caliper.Runner;
-
-
 public class TestBenchmark implements Runnable{
     private Thread t;
     private MyBenchmark b;
@@ -25,16 +20,8 @@ public class TestBenchmark implements Runnable{
         }
         t.run();
     }
-    /*
-    void buildThreads(int reps) {
-        MyBenchmark r = new MyBenchmark("RecursiveThread", reps, "recursive");
-        r.start();
-        
-        MyBenchmark i = new MyBenchmark("IterativeThread", reps, "iterative");
-        i.start();
-        
-        MyBenchmark o = new MyBenchmark("ObjectThread", reps, "objects");
-        o.start();
+    
+    public String toJsonArray() {
+        return b.toJSONArray();
     }
-    */
 }
