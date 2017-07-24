@@ -51,13 +51,7 @@ public class MyBenchmark {
         processors = Runtime.getRuntime().availableProcessors();
         load = afterLoad - beforeLoad;
         
-      /*  double[] after = EnergyCheckUtils.getEnergyStats();
-        System.out.println(
-                "Power consumption of dram: " + (after[0] - before[0]) / 10.0 + 
-                " power consumption of cpu: " + (after[1] - before[1]) / 10.0 + 
-                " power consumption of package: " + (after[2] - before[2]) / 10.0);
-        */
-        
+        /*
       
         System.out.println("Thread: " + name);
         System.out.println("======================");
@@ -67,16 +61,19 @@ public class MyBenchmark {
         System.out.println("CPU Usage: " + load);
         
         System.out.println("\n");
+        
+        */
     }
     
-    public String toJSONArray() {
-        String json = '"' + name + '"' + ':' + "[";
-        json += '"' + "Runtime" + '"' + ':' + '"' + runTime + '"' + ',';
-        json += '"' + "MemoryUsage" + '"' + ':' + '"' + memUsed + '"' + ',';
-        json += '"' + "Processors" + '"' + ':' + '"' + processors + '"' + ',';
-        json += '"' + "CPU Load" + '"' + ':' + '"' + load + '"' + ',';
-        
-        json += "]";
-        return json;
+    public String getRuntimeData() {
+        return "{\"label\":\"" + name + "\",\"value\":\"" + runTime + "\"}";
+    }
+    
+    public String getMemoryUsage() {
+        return "{\"label\":\"" + name + "\",\"value\":\"" + memUsed + "\"}";
+    }
+    
+    public String getCPULoad() {
+        return "{\"label\":\"" + name + "\",\"value\":\"" + load + "\"}";
     }
 }
