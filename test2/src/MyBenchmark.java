@@ -65,7 +65,7 @@ public class MyBenchmark {
         */
     }
     
-    public String getRuntimeData() {
+    public String getRuntime() {
         return "{\"label\":\"" + name + "\",\"value\":\"" + runTime + "\"}";
     }
     
