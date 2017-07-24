@@ -3,14 +3,16 @@
 	$command = '"C:\Program Files\Java\jdk1.8.0_65\bin\javac.exe" *.java 2>&1';
 	echo passthru($command, $err);
 	if ($err) {
-		echo "<br>Compilation contains errors";
+		// -------------------- redirect back to submit code
+		
+		header("Location: submit.php");
 	} else {
-		echo "<br>Compilation completed without errors";
-		echo `java Main`;
+		`java Main`;
+		
+		$_SESSION['runtime'] = file_get_contents('./runtime.json', true);
+		$_SESSION['memoryUsage'] = file_get_contents('./memoryUsage.json', true);
+		$_SESSION['CPULoad'] = file_get_contents('./CPULoad.json', true);
+		
+		header("Location: results.php");
 	}
-
-	$_SESSION['runtime'] = file_get_contents('./runtime.json', true);
-	$_SESSION['memoryUsage'] = file_get_contents('./memoryUsage.json', true);
-	$_SESSION['CPULoad'] = file_get_contents('./CPULoad.json', true);
-
 ?>
