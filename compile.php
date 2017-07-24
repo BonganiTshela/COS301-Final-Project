@@ -11,6 +11,6 @@
 
 	$_SESSION['runtime'] = file_get_contents('./runtime.json', true);
 	$_SESSION['memoryUsage'] = file_get_contents('./memoryUsage.json', true);
-	$_SESSION['CPULoad'] file_get_contents('./CPULoad.json', true);
+	$_SESSION['CPULoad'] = file_get_contents('./CPULoad.json', true);
 
 ?>
