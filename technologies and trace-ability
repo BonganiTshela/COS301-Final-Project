@@ -1,0 +1,105 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+
+\title{table}
+\author{u15043844 }
+\date{July 2017}
+
+\begin{document}
+
+
+\maketitle
+
+\section{Introduction}
+\section{Technologies}
+
+The languages use in this system are basically html, css, JavaScript, php, java, MySQL and Google compute engine.\newline\newline
+The system in divided in to 3 phases: web, machine and database. In terms of web, html, css and JavaScript is used to develop a web based interface that will allow the user to interact with the system. Java was used to communicate with the machine to trace the threads in the systems as the user performs the service of bench marking. The database used in the system is MySQL database. This databased is used in log/register subsystem to store all the register user of the system and to store all the records of the user for future reference. PHP is used to manipulate the database.\newline\newline
+Google Compute Engine is a platform in which the system if deployed to.
+
+
+\begin{center}
+\begin{tabular}{ | l | l | l | p{5cm} |}
+    \hline
+    
+    EC & Module &Application Rules & Description \\ \hline
+    E1 & Login & User & User: can only log in using the login page \\ \hline
+    E2 & Register & Guest  & Guest: can register only using the register pager \\ \hline
+    E3 & Bench marking & User,Guest
+    &User: can bench mark multiple times and comparing with the previous result,Guest: can only bench mark once\\\hline
+    E4 & Results & User,Guest
+    &User: can view the previous bench-marked results,Guest: can only view the result of the current bench-marked\\\hline
+\end{tabular}
+The modules of the system
+\end{center}
+
+\begin{center}
+\begin{tabular}{| l | l | l | p{2cm} | p{2cm}| p{3cm} | p{2cm} |}
+    \hline 
+    Test-Case Id & EC & R0 & Test-Case & Test Steps & Test-Data &  Expected out-Put \\ \hline
+    1 & E1 & R01 & Verify log-in &
+    \begin{enumarate}
+        \item Go to log in page
+        \item Enter user-id 
+        \item Enter password 
+        \item Click log-in
+    \end{enumarate} &
+        \begin{enumarate} 
+        \item Id=joseph 
+    \item Pass=12345
+\end{enumarate} & Log-in successful
+  \\ \hline
+    2 & E2 & R02  & Guest: can register only using the register pager& \begin{enumarate} \item Go to register page
+        \item Enter user-id
+        \item Enter email
+        \item Enter password
+        \item Click register
+    \end{enumarate} & 
+        \begin{enumarate}
+            \item Id= bongs
+            \item Pass=12345
+            \item Email=lets@gmail.com
+        \end{enumarate}
+    &Register successful
+ \\ \hline
+    3 & E3 & R03
+    &User: can bench mark multiple times and comparing with the previous result,Guest: can only bench mark once&
+    \begin{enumarate}
+            \item Upload .java files
+            \item Click submit
+    \end{enumarate}&
+    \begin{enumarate}
+            \item Tester.java
+            \item Algorithm.java
+    \end{enumarate}&
+    Bench-marking successful
+    \\\hline
+    4 & E4 & R04
+    &User: can view the previous bench-marked results,Guest: can only view the result of the current bench-marked &
+    \begin{enumarate}
+            \item If Bench marking successful
+    \end{enumarate}& &Result successful\\\hline
+\end{tabular}
+
+\label{table:ta}
+\end{center}
+
+\begin{center}
+\begin{tabular}{ | l | l | l |}
+    \hline
+    
+    System Requirements  & Technical Requirements &Test Case-Id  \\ \hline
+    E1 & R01 & 1 \\ \hline
+    E2 & R02 & 2 \\ \hline
+    E3 & R03 & 3 \\ \hline
+    E4 & R04 & 4 \\ \hline
+\end{tabular}
+\end{center}
+\begin{center}
+    \caption{System Requirement Tractability }
+\end{center}
+
+\end{document}
