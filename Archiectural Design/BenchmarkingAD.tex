@@ -99,18 +99,41 @@ includefoot
 \addcontentsline{toc}{section}{Table Of Contents}
 \endgroup
 \newpage
-\section{Project background.}
-Bench marking seem to be a very common and useful application, very few bench-marking tools or services are available. Those that are available requires intricate configuration that may be beyond the reach of the developers, researchers,
-teachers and students who would like to use them. The development of a bench-marking service which can be used in a generic way would therefore be welcomed by a large
-potential user base.
+\section{Introduction}
 
-\section{Project vision.}
-The system provides a web interface for users to request and specify the bench-marking services they need. The services will be provided by executing the requested benchmarks on isolated machines where the side-effects that are not a concern of the specified benchmark is minimized. The system measures a variety of performance attributes such as CPU time, elapsed time, memory usage, power consumption, heat generation, etc. Ir accepts source code for a variety modern programming languages.
+\subsection{Purpose}
+This document is intended to provide clarity to the choices made in terms of architectural design for the benchmarking project. Intended users for this document would be any stakeholders of the system, from a developer to the end-user seeking to understand the architecture.
+
+\subsection{Document Convention}
+The Benchmarking uses Java as the programming language of choice to build the system and as such uses Javadoc documentation for its source code.
+
+\subsection{Project Scope}
+The system provides a web interface for users to request and specify the benchmarking services they need. The services will be provided by executing the requested benchmarks on isolated machines where the side-effects that are not a concern of the specified benchmark is minimized. The system measures a variety of performance attributes such as CPU time, elapsed time, memory usage, power consumption, heat generation, etc. It accepts source code for a variety modern programming languages. Limitations for the system are the number of programming languages that are supported and the representation formats the results are represented in.
+
+\subsection{References}
+
+
+
+\section{System description}
+Benchmarking is a very common and useful service, and yet few benchmarking tools or services are easily available. Those that are available may require intricate configuration that is beyond the reach of the budding developers, researchers, teachers and students who would like to use them. The development of a benchmarking service which can be used in a simple and generic way would therefore be welcomed by a large potential user base.
 
 \section{Overall Architecture}
 \subsection{Architectural Patterns}
 The Benchmarking service will utilize a combination of architectural patterns. The first being Client-server architecture, since the clients will interact with a web interface to the server and send through requests for operations to be performed, the server does not know the client and the clients do not know each other. The second pattern is that of a Cloud computing architecture, where it will operate with the Benchmarking program performing as software as a service (SaaS). Resources allocated will be approximately the amount needed, so if the user is charged for usage, then it would be for the actual amount of resources used.\\
 
+\subsection{Architectural Strategies}
+
+\subsection{Reference Architectures}
+
+\subsection{Technology and frameworks selection}
+
+\section{Details of Subsystem}
+
+\section{Policies}
+
+\section{Traceability Matrix}
+
+% ========================================================= rest of old document
 
 \section{Project Scope}
 The core of the system is a benchmarking tool which. The high level modules and their responsibilities are
