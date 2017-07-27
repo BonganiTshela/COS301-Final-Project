@@ -21,10 +21,6 @@ public class TestBenchmark implements Runnable{
         t.run();
     }
     
-    public String toJsonArray() {
-        return b.toJSONArray();
-    }
-    
     public MyBenchmark getBenchmark() {
         return b;
     }
