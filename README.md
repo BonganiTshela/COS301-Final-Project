@@ -8,6 +8,7 @@
 - Minal Pramlall 13288157 
 - Joseph Letsoalo 15043844
 - Harris Leshaba 15312144 
+![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
 
 ### Resources
 * Our Slack Team: https://procoders301.slack.com/
