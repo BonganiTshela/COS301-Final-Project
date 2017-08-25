@@ -23,7 +23,7 @@
 				$sql = "SELECT * FROM files WHERE userid = " . $_SESSION['id'] . " AND benchSession = " . $session;
 				$result = $db->query($sql);
 				
-				$name = $array();
+				$name = array();
 				$cpu = array();
 				$ram = array();
 				$elapsed = array();
