@@ -24,19 +24,19 @@ public class Main {
                 if (k + 1 < numAlgos)
                     rdata += ",";
                 else
-                    rdata += "])";
+                    rdata += "]}";
                 
                 mdata += mb[k].getMemoryUsage();
                 if (k + 1 < numAlgos)
                     mdata += ",";
                 else
-                    mdata += "])";
+                    mdata += "]}";
                 
                 cdata += mb[k].getCPULoad();
                 if (k + 1 < numAlgos)
                     cdata += ",";
                 else
-                    cdata += "])";
+                    cdata += "]}";
             }
                 
             FileWriter f = new FileWriter("json/runtime" + (i + 1) + ".json", false);
