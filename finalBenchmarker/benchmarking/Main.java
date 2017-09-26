@@ -39,19 +39,19 @@ public class Main {
                     cdata += "])";
             }
                 
-            FileWriter f = new FileWriter("runtime" + (i + 1) + ".json", false);
+            FileWriter f = new FileWriter("json/runtime" + (i + 1) + ".json", false);
             PrintWriter p = new PrintWriter(f);
 
             p.print(rdata);
             p.close();
             
-            f = new FileWriter("memoryUsage" + (i + 1) + ".json", false);
+            f = new FileWriter("json/memoryUsage" + (i + 1) + ".json", false);
             p = new PrintWriter(f);
 
             p.print(mdata);
             p.close();
 
-            f = new FileWriter("CPULoad" + (i + 1) + ".json", false);
+            f = new FileWriter("json/CPULoad" + (i + 1) + ".json", false);
             p = new PrintWriter(f);
 
             p.print(cdata);
