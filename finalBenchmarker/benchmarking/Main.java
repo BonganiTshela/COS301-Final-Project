@@ -10,46 +10,48 @@ public class Main {
         
         String filesPath = "testFiles/", rdata = "", mdata = "", cdata = "";
         MyBenchmark[] mb = new MyBenchmark[numAlgos];
+		for (int k = 0; k < numAlgos; k++)
+			mb[k] = new MyBenchmark();		
         File[] files = new File(filesPath).listFiles();
-        for (int i = 1; i <= files.length; i++) {
-            for (int k = 1; k <= numAlgos; k++) {
-                mb[k].benchmark(numAlgos, filesPath + files[i].getName());
+        for (int i = 0; i < files.length; i++) {
+            rdata = "{\"chart\":{\"caption\":\"Runtime\",\"theme\":\"ocean\"},\"data\":[";
+			mdata = "{\"chart\":{\"caption\":\"Memory Usage\",\"theme\":\"ocean\"},\"data\":[";
+            cdata = "{\"chart\":{\"caption\":\"CPU Load\",\"theme\":\"ocean\"},\"data\":[";
+            for (int k = 0; k < numAlgos; k++) {
+                mb[k].benchmark(k + 1, filesPath + files[i].getName());
                 
-                rdata = "{\"chart\":{\"caption\":\"Runtime\",\"theme\":\"ocean\"},\"data\":[";
                 rdata += mb[k].getRuntime();
-                if (k < numAlgos)
+                if (k + 1 < numAlgos)
                     rdata += ",";
                 else
                     rdata += "])";
                 
-                mdata = "{\"chart\":{\"caption\":\"Memory Usage\",\"theme\":\"ocean\"},\"data\":[";
                 mdata += mb[k].getMemoryUsage();
-                if (k < numAlgos)
+                if (k + 1 < numAlgos)
                     mdata += ",";
                 else
                     mdata += "])";
                 
-                cdata = "{\"chart\":{\"caption\":\"CPU Load\",\"theme\":\"ocean\"},\"data\":[";
                 cdata += mb[k].getCPULoad();
-                if (k < numAlgos)
+                if (k + 1 < numAlgos)
                     cdata += ",";
                 else
                     cdata += "])";
             }
                 
-            FileWriter f = new FileWriter("runtime" + i + ".json", false);
+            FileWriter f = new FileWriter("runtime" + (i + 1) + ".json", false);
             PrintWriter p = new PrintWriter(f);
 
             p.print(rdata);
             p.close();
             
-            f = new FileWriter("memoryUsage" + i + ".json", false);
+            f = new FileWriter("memoryUsage" + (i + 1) + ".json", false);
             p = new PrintWriter(f);
 
             p.print(mdata);
             p.close();
 
-            f = new FileWriter("CPULoad" + i + ".json", false);
+            f = new FileWriter("CPULoad" + (i + 1) + ".json", false);
             p = new PrintWriter(f);
 
             p.print(cdata);

@@ -1,4 +1,6 @@
 cp uploaded/*.txt benchmarking/testFiles
 ALGOS="$(java Primer)"
+echo "$ALGOS"
 javac benchmarking/*.java
-java -cp benchmarking Main $ALGOS
+cd benchmarking
+java Main "$ALGOS"
