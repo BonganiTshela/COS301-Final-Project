@@ -4,9 +4,11 @@ public class Primer {
     
     public static void main(String[] args) throws IOException {
         File[] files = new File("uploaded").listFiles();
+	    // gets all the files that has been uploaded
         int count = 0, MAX_ALGORITHMS = 10;
         for (File file : files) {
             if (file.isFile() && MAX_ALGORITHMS > count) {
+		    // foreach file that is a java file, read contents
                 String fname = file.getName();
                 if (fname.substring(fname.length() - 5).equals(".java")) {
                     InputStream is = new FileInputStream("uploaded/" + fname);
@@ -17,7 +19,7 @@ public class Primer {
                         sb.append(line).append("\n");
                         line = b.readLine();
                     }
-                    
+                    // replace class name with tester# and class name is stored in algoName
                     count++;
                     String cname = fname.substring(0, fname.length() - 5);
                     String fileContents = sb.toString();
