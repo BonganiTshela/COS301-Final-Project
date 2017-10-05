@@ -7,17 +7,26 @@ public class Main {
      */
     public static void main(String[] args) throws IOException {
         int numAlgos = Integer.parseInt(args[0]);
-        
+        // gets the number of algorithms that were uploaded as the first argument
         String filesPath = "testFiles/", rdata = "", mdata = "", cdata = "";
         MyBenchmark[] mb = new MyBenchmark[numAlgos];
 		for (int k = 0; k < numAlgos; k++)
-			mb[k] = new MyBenchmark();		
-        File[] files = new File(filesPath).listFiles();
-        for (int i = 0; i < files.length; i++) {
+			mb[k] = new MyBenchmark();	
+	    // initializes algorithms to be benchmarked in above array
+        File[] files = new File(filesPath).listFiles(); 
+	if (files.length == 0) { 
+            files = new File[1]; 
+	file[0] = new File("Main.java");
+	}
+	    // gets all test data files, but initializes a dummy if none were provided
+	
+        for (int i = 0; i < files.length; i++) { 
+		// for each test data file, is run against all algorithms
             rdata = "{\"chart\":{\"caption\":\"Runtime\",\"theme\":\"ocean\"},\"data\":[";
 			mdata = "{\"chart\":{\"caption\":\"Memory Usage\",\"theme\":\"ocean\"},\"data\":[";
             cdata = "{\"chart\":{\"caption\":\"CPU Load\",\"theme\":\"ocean\"},\"data\":[";
             for (int k = 0; k < numAlgos; k++) {
+		    // building json output 
                 mb[k].benchmark(k + 1, filesPath + files[i].getName());
                 
                 rdata += mb[k].getRuntime();
@@ -38,7 +47,7 @@ public class Main {
                 else
                     cdata += "]}";
             }
-                
+            // saves json files for each data set
             FileWriter f = new FileWriter("json/runtime" + (i + 1) + ".json", false);
             PrintWriter p = new PrintWriter(f);
 
