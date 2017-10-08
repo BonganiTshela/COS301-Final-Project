@@ -42,12 +42,15 @@ session_start();
 
    $sqle ="
       CREATE TABLE IF NOT EXISTS files
-      (userid INT PRIMARY KEY     NOT NULL,
+      (userid INT	NOT NULL,
       CPU        INT    NOT NULL,
       RAM       INT     NOT NULL,
       ELASPED        INT,
       POWER       INT,
-      HEAT        INT
+      HEAT        INT,
+	  testid	INT,
+	  benchmarkid	INT	NOT NULL AUTO_INCREMENT,
+	  PRIMARY KEY (benchmarkid)
       );";
 
      $ret=mysqli_query($con,$sqle);
