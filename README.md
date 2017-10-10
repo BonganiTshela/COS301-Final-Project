@@ -6,9 +6,9 @@ This branch ahs all the documentation followed when developing this system. If y
 ## Team name:  ProCoders.
 ## OverView of the Project
 
-ProCoders work on the project of Benchmarking service. This service will be web-based application which is used to test the functionality of the users algorithm. The aim of this service is to allow the users know their algorithms before using them in their application. This algorithm is useful many areas of development which requires the developer to chose between multiple algorithms. Example supposed the user want to choose between two search algorithm, with Benchmarking service the user just can test the functionality of the algorithm and how much resource of the systems does the algorithm use.
+The system provides a web interface for users to request and specify the benchmarking services they need. The services will be provided by executing the requested benchmarks on isolated machines where the side-effects that are not a concern of the specified benchmark is minimized. The system measures a variety of performance attributes such as CPU time, elapsed time, memory usage, power consumption, heat generation, etc. It accepts source code for Java programming language and text. The system is set to run on the linux bare-metal machine and run benchmarks on seperate benchmarking nodes(both bare-metal and uni-kernels). The compilation of algorithms will be done before benchmarking, thus reducing overhead.
 
-This project provides the user the ability to test their algorithms before using them in their personal project. It is more like a research service that it will be used to acquired more information about the performance of the algorithm.
+The system then produces the results graphically so that they are easily readable, the results are also downloadable. Registered users will be able to save their results in PDF form and will be able to view previous benchmarks while unregistered users will not be able to.
 
 ### Team Members
 - Bongani Tshela 14134790
