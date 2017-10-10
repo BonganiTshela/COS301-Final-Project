@@ -2,6 +2,11 @@
 ### Benchmarking Service
 ---
 ## Team name:  ProCoders.
+## OverView of the Project
+
+ProCoders work on the project of Benchmarking service. This service will be web-based application which is used to test the functionality of the users algorithm. The aim of this service is to allow the users know their algorithms before using them in their application. This algorithm is useful many areas of development which requires the developer to chose between multiple algorithms. Example supposed the user want to choose between two search algorithm, with Benchmarking service the user just can test the functionality of the algorithm and how much resource of the systems does the algorithm use.
+
+This project provides the user the ability to test their algorithms before using them in their personal project. It is more like a research service that it will be used to acquired more information about the performance of the algorithm.
 
 ### Team Members
 - Bongani Tshela 14134790
