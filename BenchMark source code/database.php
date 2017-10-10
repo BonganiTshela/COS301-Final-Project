@@ -43,6 +43,7 @@ session_start();
    $sqle ="
       CREATE TABLE IF NOT EXISTS files
       (userid INT	NOT NULL,
+      algoName varchar,
       CPU        INT    NOT NULL,
       RAM       INT     NOT NULL,
       ELASPED        INT,
