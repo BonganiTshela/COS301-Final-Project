@@ -27,15 +27,15 @@
 		$e = array();
 		for ($k = 0; k < count($arr); $k++) {
 			$temp = array();
-			$temp['label'] = $arr[$k]['algoName'];
-			$temp['value'] = $arr[$k]['CPU'];
+			$temp['label'] = $arr[$k][0];
+			$temp['value'] = $arr[$k][1];
 			array_push($c, $temp);
 			
-			$temp['value'] = $arr[$k]['RAM'];
+			$temp['value'] = $arr[$k][2];
 			array_push($r, $temp);
 			
-			$temp['value'] = $arr[$k]['ELAPSED'];
-			array_push($r, $temp);
+			$temp['value'] = $arr[$k][3];
+			array_push($e, $temp);
 		}
 		
 		$t = array();
