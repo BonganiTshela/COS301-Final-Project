@@ -1,6 +1,8 @@
 ## COS 301 Capstone project
 ### Benchmarking Service
 ---
+## Purpose of the Branch
+This branch ahs all the documentation followed when developing this system. If you wish to develop the system in your own follow all the documention that is in this branch.
 ## Team name:  ProCoders.
 ## OverView of the Project
 
