@@ -46,7 +46,7 @@ session_start();
       algoName varchar,
       CPU        INT    NOT NULL,
       RAM       INT     NOT NULL,
-      ELASPED        INT,
+      ELAPSED        INT,
       POWER       INT,
       HEAT        INT,
 	  testid	INT,
