@@ -2,6 +2,14 @@
     session_start();
     $name=$_SESSION['username'];
     $last=$_SESSION['lastname'];
+
+	include("functions.php");
+	$conn = new mysqli("localhost", "root", "", "final_project");
+
+	$result = $conn->query("SELECT (COUNT(*)) AS counted FROM files WHERE userid = " . $_SESSION['userid']);
+	while($row = $result->fetch_assoc())
+		$count = $row['counted'];
+
 ?>
 
 
@@ -111,7 +119,7 @@
                                         <i class="fa fa-comments fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">8</div>
+                                        <div class="huge"><?php echo $count; ?></div>
                                         <div>CPU usage tested!</div>
                                     </div>
                                 </div>
@@ -133,7 +141,7 @@
                                         <i class="fa fa-tasks fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">12</div>
+                                        <div class="huge"><?php echo $count; ?></div>
                                         <div>RAM usage tested</div>
                                     </div>
                                 </div>
@@ -155,7 +163,7 @@
                                         <i class="fa fa-shopping-cart fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">6</div>
+                                        <div class="huge"><?php echo $count; ?></div>
                                         <div>Power Consumption tested</div>
                                     </div>
                                 </div>
@@ -177,7 +185,7 @@
                                         <i class="fa fa-support fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">13</div>
+                                        <div class="huge"><?php echo $count; ?></div>
                                         <div>Heat generation tested</div>
                                     </div>
                                 </div>

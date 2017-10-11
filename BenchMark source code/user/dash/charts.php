@@ -2,10 +2,25 @@
     session_start();
     $name=$_SESSION['username'];
     $last=$_SESSION['lastname'];
+
+	require("../../fusioncharts.php");
+	
+
+	$conn = new mysqli("localhost", "root", "", "final_project");
+
+	$result = $conn->query("SELECT * FROM files WHERE userid = " . $_SESSION['userid']);
+
+	$c = $r = $e = 0;
+
+	while ($row = $result->fetch_assoc()) {
+		$c = $row['CPU'];
+		$r = $row['RAM'];
+		$e = $row['ELAPSED'];
+	}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
     <meta charset="utf-8">
@@ -16,6 +31,7 @@
 
     <title>Pro-Benchmarking Results</title>
 
+	<script src="../../fc/js/fusioncharts.js"></script>
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -44,7 +60,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Pro Benchmarking Guest User</a>
+                <a class="navbar-brand" href="index.html">Pro Benchmarking User</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
@@ -60,10 +76,10 @@
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
-                   <li class="active">
+                   <li>
                         <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="tables.php"><i class="fa fa-fw fa-bar-chart-o"></i>Results</a>
                     </li>
                    
@@ -102,25 +118,30 @@
                 <!-- Flot Charts -->
                 <div class="row">
                     <div class="col-lg-12">
-                        <h2 class="page-header">Flot Charts</h2>
-                        <p class="lead">The result are as flows for the services you have requested for <b>Bubble sort</b>:
-                        <ol>
-                            <li>RAM usage:<b>4.48 Mb</b></li>
-                            <li>CPU Time:<b>3.58 sec</b> </li>
-                            <li>Power Consumtion:<b>3.58 Watts</b></li>
-                        </ol>
-                        <p class="lead">The result are as flows for the services you have requested for <b>Radix sort</b>:
-                        <ol>
-                            <li>RAM usage:<b>3.48 Mb</b></li>
-                            <li>CPU Time:<b>2.03 sec</b> </li>
-                            <li>Power Consumtion:<b>4.01 Watts</b></li>
-                        </ol>
-                        <p class="lead">The result are as flows for the services you have requested for <b>Com sort</b>:
-                        <ol>
-                            <li>RAM usage:<b>4.01 Mb</b></li>
-                            <li>CPU Time:<b>3.08 sec</b> </li>
-                            <li>Power Consumtion:<b>3.58 Watts</b></li>
-                        </ol>
+                        <h2 class="page-header">Charts</h2>
+						
+						<?php 
+							$temp = $c;
+							$c = new FusionCharts("Column2D", "cpu", 600, 300, "c", "json", "'".$temp."'");
+							$c->render(); 
+						?>
+						<div id="c"></div>
+						
+						<?php							
+							$temp = $r;
+							$r = new FusionCharts("Column2D", "ram", 600, 300, "r", "json", "'".$temp."'");
+							$r->render(); 
+						?>
+						<div id="r"></div>
+						
+						<?php
+							$temp = $e;
+							$e = new FusionCharts("Column2D", "elapsed", 600, 300, "e", "json", "'".$temp."'"); 
+							$e->render(); 
+						?>
+						<div id="e"></div>
+						
+                        
                     </div>
                 </div>
                 
