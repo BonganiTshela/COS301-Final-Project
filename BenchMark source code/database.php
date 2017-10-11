@@ -43,13 +43,9 @@ session_start();
    $sqle ="
       CREATE TABLE IF NOT EXISTS files
       (userid INT	NOT NULL,
-      algoName varchar,
-      CPU        INT    NOT NULL,
-      RAM       INT     NOT NULL,
-      ELAPSED        INT,
-      POWER       INT,
-      HEAT        INT,
-	  testid	INT,
+      CPU        VARCHAR(2048)    NOT NULL,
+      RAM       VARCHAR(2048)     NOT NULL,
+      ELASPED        VARCHAR(2048) NOT NULL,
 	  benchmarkid	INT	NOT NULL AUTO_INCREMENT,
 	  PRIMARY KEY (benchmarkid)
       );";

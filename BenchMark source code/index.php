@@ -41,7 +41,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Pro Banchmarking</a>
+                <a class="navbar-brand page-scroll" href="#page-top">Pro Benchmarking</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -74,7 +74,7 @@
     <header>
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in">Welcome To Banchmaking!</div>
+                <div class="intro-lead-in">Welcome To Benchmarking!</div>
                 <div class="intro-heading">It's Nice To Meet You</div>
                 <a href="guest/bench.php" class="page-scroll btn btn-xl">Start Benchmarking</a>
             </div>
@@ -87,7 +87,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Services</h2>
-                    <h3 class="section-subheading text-muted">Following are the services we offer.</h3>
+                    <h3 class="section-subheading text-muted">Here are the following services we offer.</h3>
                 </div>
             </div>
             <div class="row text-center">
@@ -152,7 +152,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">About</h2>
-                    <h3 class="section-subheading text-muted">Software benchmarking is imortant. In industry benchmarks are used to ensure software performance is acceptable. This program/website does exactly that for you. We benchmark Java programs and algorithms by running tests and programs and returning the results to you in the user.</h3>
+                    <h3 class="section-subheading text-muted">Software benchmarking is important. In industry benchmarks are used to ensure software performance is acceptable. This program/website does exactly that for you. We benchmark Java programs and algorithms by running tests and programs and returning the results to you.</h3>
                 </div>
             </div>
             <div class="row">
@@ -214,7 +214,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; Pro Banchmaking 2017</span>
+                    <span class="copyright">Copyright &copy; Pro Benchmarking 2017</span>
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline social-buttons">
