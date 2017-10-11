@@ -51,7 +51,7 @@ session_start();
   else if(mysqli_num_rows($ret)>0){
      
       $row = mysqli_fetch_row($ret);
-    
+      $_SESSION['userid'] = $row[0];
       $_SESSION['username']=$row[1];
       $_SESSION['lastname']=$row[2];
     ?>
