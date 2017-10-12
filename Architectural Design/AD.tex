@@ -105,7 +105,7 @@ includefoot
 This document is intended to provide clarity to the choices made in terms of architectural design for the benchmarking project. Intended users for this document would be any stakeholders of the system, from a developer to the end-user seeking to understand the architecture.
 
 \subsection{Project Scope}
-The system provides a web interface for users to request and specify the benchmarking services they need. The services will be provided by executing the requested benchmarks on isolated machines where the side-effects that are not a concern of the specified benchmark is minimized. The system measures a variety of performance attributes such as CPU time, elapsed time, memory usage, power consumption, heat generation, etc. It accepts source code for a variety modern programming languages. Limitations for the system are the number of programming languages that are supported and the representation formats the results are represented in.
+The system provides a web interface for users to request and specify the benchmarking services they need. The services will be provided by executing the requested benchmarks on isolated machines where the side-effects that are not a concern of the specified benchmark is minimized. The system measures a variety of performance attributes such as CPU time, elapsed time, memory usage. It accepts source code for the java programming language. 
 
 
 \section{System description}
@@ -123,9 +123,7 @@ The architectural tactic that could address the need of the benchmarking system'
 
 % ========================================================= rest of old document
 
-\section{Project Scope}
-The core of the system is a benchmarking tool which. The high level modules and their responsibilities are
-shown in Figure 1
+
 
 \section{Details of Subsystem}
 \subsection{User management module}
@@ -216,18 +214,15 @@ When it comes to Display technologies, one in particular is of note.
 	\item 3.Support for many output types, including Swing and JavaFX components, image files (including PNG and JPEG), and vector graphics file formats (including PDF, EPS and SVG);
 	\item 4.JFreeChart is open source or, more specifically, free software. It is distributed under the terms of the GNU Lesser General Public Licence (LGPL), which permits use in proprietary applications.\\
 	
-\subsection{Bench-marking and VM initializing Module}
+\subsection{Bench-marking and initialize bare metal machines Module}
 \subsubsection{\textbf{Scope}}
 
-The module initializes and deploys VMs based on the request(s). On the VMs we will have a Java program that runs other programs, that is compile them, run them with the user specified data sets and then benchmark the program or algorithms. This module will initialize VMs on request and can initialize them concurrently within seconds.\\
+The module initializes bare metal machines. The machines will have a Java program that runs algorithm with the user specified data sets and then benchmark the program or algorithms. This module will initialize machines.\\
 
 \includegraphics[width=15cm , height=10cm]{VM.jpg}  \\
 \subsubsection{\textbf{Service Contracts}}
 \includegraphics[width=15cm , height=10cm]{SCBenchmark.jpg}  \\
-\subsubsection{\textbf{Technologies}}\newline
-Osv - the open source operating system designed for the cloud. Built from the ground up for effortless deployment and management, with superior performance.\\
 
-Unikernels - specialized, single address space machine images constructed by using library operating systems(Osv in our case).We select, from a modular stack, the minimal set of libraries which correspond to the OS constructs required for our application to run.\\
 
 \subsection{Access Module}\newline
 \subsubsection{\textbf{Scope}}
@@ -240,6 +235,6 @@ The domain model of the access module basically depicts how the access module wi
 The sequence diagram demonstrates how a basic benchmark would be carried out by the user, by indicating how the modules interact with each other.
 
 \section{System Deployment Diagram}
-\includegraphics[width=15cm , height=10cm]{Deployment Diagram.jpg} \\
+\includegraphics[width=15cm , height=10cm]{deployment.jpg} \\
 
 \end{document}
