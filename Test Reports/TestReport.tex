@@ -47,7 +47,7 @@ includefoot
 %Title Page
 \begin{titlepage}
 	\begin{center}
-		\includegraphics[width=10cm]{../Images/UP_Logo.PNG}  \\
+		\includegraphics[width=10cm]{UP_Logo.PNG}  \\
 		[1cm]
 		\line(1,0){300} \\
 		[0.3cm]
@@ -113,10 +113,7 @@ The Benchmarking service will be to provide users with the capability of testing
 with graphical data backed by performed tests. Programmers are taught multiple ways to complete a task,
 and with a benchmarking tool at their disposal, they will be able to make informed decisions with which is the
 best algorithm to use among the ones that they have considered.
-The service will make use of microkernels, a super-lightweight operating system that will handle user requests
-and provide results. The system will be run off a cloud infrastructure service such as Google Cloud Compute
-Engine, to ensure the service is completely online, and thus completely accessible from anywhere with an
-internet connection.
+The system runs on a bare-metal server (Linux-Ubuntu) and uses remote ubuntu servers as seperate benchmarking nodes. The system uses ngrok for purposes of making the site public (tunneling). 
 The user will communicate with the system through a website interface, they can submit multiple algorithms
 to benchmark and multiple datasets for them to be tested against. The system will benchmark all of these
 concurrently and provide the user with graphs and other visual output on the results.
@@ -125,9 +122,9 @@ The system will be released into the open-source domain upon completion (Per req
 }
 \section{Types of testing.}
 \raggedright{
-1. Unit Testing : \\
-We are using usnit testing in Java [Junit] to test and verify each and every function implemented.\\
-2. Intergration Testing : \\
+1.\textbf{Unit Testing :}  \\
+We are using unit testing in Java [Junit] to test and verify each and every function implemented.\\
+2.\textbf{Integration Testing :}  \\
 We are using Sahi Pro to test both the functions in web scripting and the intergrated application or system.
 
 }
@@ -137,12 +134,89 @@ We are using Sahi Pro to test both the functions in web scripting and the interg
 User registration and log-in : \\
 The functions for user registration and verification were written in PHP and are being tested with sahi pro. The functions work properly with all test conditions we put it in. The module queries the database successfully and returns and displays relevant errors when results are not found.
 
-\subsection{ Bench-marking and VM initializing Module.}
-Algorithm bench-marking : \\
-Given the correct parameters [Test data and an actual algorithm], this module works fine under certain conditions [The module is still in development].  The module is written in java and being tested with Junit. The module will report code errors and infinite loops or non functioning codes.\\
-VM-Initializing : \\
-{Module still under development. This module is written in Java and other scripting languages to initialize and queue virtual Osv machines to be used by the system.\\
-}
+\subsubsection{User Registration}
+Adds user to the system if the provided results are verified to be true or valid.
+\begin{center}
+\begin{tabular}{ |c|c|c|c|c| } 
+\hline
+Function & Input & Expected Output & Output & Passing \\
+\hline
+\multirow{3}{8em}{RegisterUser()} & Email Address,  & Boolean or & Add user &Yes\\ 
+& FName, LName & Error message & to DB &\\ 
+& Password &  & &\\ 
+\hline
+\end{tabular}
+\end{center}
+
+\subsubsection{User Login}
+Connects to the database, request to verify if user exists in the database, if the user exists it is a successful log-in and unsuccessful i the user does not exist in the database.
+\begin{center}
+\begin{tabular}{ |c|c|c|c|c| } 
+\hline
+Function & Input & Expected Output & Output & Passing \\
+\hline
+\multirow{3}{8em}{LoginUser()} & Email Address,  & Boolean or & Successfull &Yes\\ 
+& Password & Error message & login &\\ 
+&  &  & &\\ 
+\hline
+\end{tabular}
+\end{center}
+
+
+
+%%%%%%%%JAVA Testing%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Java files Testing }
+All Java functions and subsections were tested with Junit (Unit testing). These functions deal with benchmarking the algorithms that the user uploads(Main functionality of the system).
+\subsubsection{CPUcalculation()}
+This function it is used to calculate what percentage the Algorithm uses of the CPU.
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c|c| } 
+\hline
+Function & Input & Expected Output & Output & Passing \\
+\hline
+\multirow{3}{8em}{CPUcalculatio()} & tester.java,  & Percentage & Percentage &Yes\\ 
+& algorithm.java & usage of CPU & usage of CPU &\\ 
+& test.txt &  & &\\ 
+\multirow{3}{8em}{CPUcalculatio()} & tester.java,  & Percentage & ERROR: no &Yes\\ 
+& algorithm.java & usage of CPU & usage of the CPU &\\ 
+& &  & &\\
+\multirow{3}{8em}{CPUcalculatio()} & tester.java,  & Percentage  &Compilation  &Yes\\ 
+&  &usage of CPU &ERROR& \\ 
+& test.txt &  & & \\
+\multirow{3}{8em}{CPUcalculatio()} & & Percentage &Compilation & Yes \\ 
+& algorithm.java &usage of CPU  &ERROR & \\ 
+& test.txt &  & & \\
+\hline
+\end{tabular}
+\end{center}
+
+
+\subsubsection{RAMusage()}
+This function it is used to calculate what is the size of RAM does the Algorithm uses in bytes.
+\begin{center}
+\begin{tabular}{ |c|c|c|c|c| } 
+\hline
+Function & Input & Expected Output & Output & Passing \\
+\hline
+\multirow{3}{8em}{RAMusage()} & tester.java,  & Size of & Size of &Yes\\ 
+& algorithm.java & Memory usage & Memory usage &\\ 
+& test.txt &  & &\\ 
+\multirow{3}{8em}{RAMusage()} & tester.java,  & Size of & ERROR: no &Yes\\ 
+& algorithm.java & Memory usage & usage of the CPU &\\ 
+& &  & &\\
+\multirow{3}{8em}{RAMusage()} & tester.java,  & Size of  &Compilation  &Yes\\ 
+&  &Memory usage &ERROR& \\ 
+& test.txt &  & & \\
+\multirow{3}{8em}{RAMusage()} & & Size of &Compilation & Yes \\ 
+& algorithm.java &Memory usage  &ERROR & \\ 
+& test.txt &  & & \\
+\hline
+\end{tabular}
+\end{center}
+
+
+
 \subsection{Display module}
 \raggedright{
 The module is witten in PHP and other web scripting language. Given the results (Json strings) from the bench-marking module, the module graphically represents the results to make it easy for the use to see their results. The module was tested with Sahi Pro (Screenshots to follow) and it works fine under all test conditions it was put in.\\
@@ -151,19 +225,10 @@ The module is witten in PHP and other web scripting language. Given the results 
 \subsection{Access Module}
 
 }
-\section{Non-Functional requirements Tested.}
-\raggedright{
-1. Scalability - This is a big part of this project. Scalability has been tested and we are in a process of making the project even more scalable.
-\\2. Security - \\
-3. Performance - \\
-4. Reliability - \\
-5. Maintainability - \\
-
-}
 
 \section{Conclusion.}
 \raggedright{
-The testing of the bench-marking is a work in progress and some modules will still be properly tested. Screen-shots and test data will be posted shortly.
+The system was tested and most of the tests succeeded. The system was also tested for scalability and it performs well depending on the number of benchmarking nodes available. The intergrated system was also tested with different users (peers, clients, lectures). Through testing with different users it was found that the benchmarks are slower when the user uploads a seperate data-set file than when they give datasets in the testing java files/Main files.
 }
 
 \end{document}
