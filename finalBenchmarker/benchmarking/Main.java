@@ -13,11 +13,9 @@ public class Main {
 		for (int k = 0; k < numAlgos; k++)
 			mb[k] = new MyBenchmark();	
 	    // initializes algorithms to be benchmarked in above array
-        File[] files = new File(filesPath).listFiles(); 
-	if (files.length == 0) { 
-            files = new File[1]; 
-	file[0] = new File("Main.java");
-	}
+        File[] files = new File(filesPath).listFiles();
+	if (files.length == 0)
+		files = new File("null").listFiles();
 	    // gets all test data files, but initializes a dummy if none were provided
 	
         for (int i = 0; i < files.length; i++) { 
