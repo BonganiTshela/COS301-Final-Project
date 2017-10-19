@@ -1,0 +1,6 @@
+1. make sure th app is hosted on bare-metal server--done
+2. benchmark on atleast two platforms--busy
+3. uploa data sets-busy
+3. export result--semi-done
+4. test using sahi pro. (both intergrartion and unit testing-junit0--in progress
+5. Change the app interface----done
