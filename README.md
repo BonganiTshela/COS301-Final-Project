@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/ProBlack95/COS301-Final-Project.png?label=ready&title=Ready)](https://waffle.io/ProBlack95/COS301-Final-Project?utm_source=badge)
 ## COS 301 Capstone project
 ### Benchmarking Service
 ---
